@@ -1,0 +1,16 @@
+.Header {
+  padding: 1em;
+  background-color: yellow;
+  text-align: center;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+
+  img {
+    width: 10em;
+    height: 10em;
+  }
+
+  a {
+    align-self: center;
+  }
+}
