@@ -1,0 +1,36 @@
+.h2 {
+  /* Size & Position */
+  width: 60%;
+  margin: auto;
+  padding: 1em;
+  
+  /* Color & Text */
+  background-color: rgb(255, 206, 115);
+  text-align: center;
+  font-size: 2em;
+}
+.form {
+  /* Size & Position */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.questionLabel {
+  /* Size & Position */
+  width: 80%;
+  margin: 0.2em auto 0.2em auto;
+  display: block;
+
+  /* Color & Text */
+  font-size: 1.4em;
+  text-align: center;
+  word-wrap: break-word;
+}
+.questionInput {
+  /* Size & Position */
+  width: 100%;
+  padding: 0.2em;
+
+  /* Color & Text */
+  font-size: 0.9em;
+}

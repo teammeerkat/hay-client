@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import styles from './PollForm.css';
 export default class PollForm extends PureComponent {
   state = {
     responses: [],
@@ -40,12 +41,12 @@ export default class PollForm extends PureComponent {
     return (
       <>
         <header>
-          <h2>Make a New Poll</h2>
+          <h2 className={styles.h2}>Make a New Poll</h2>
         </header>
         <main>
-          <form>
-            <label>Poll Question:
-              <textarea onChange={this.handleChange} name='question'></textarea>
+          <form >
+            <label className={styles.questionLabel}>Poll Question:
+              <input className={styles.questionInput} type='text' onChange={this.handleChange} name='question'  autoFocus></input>
             </label>
             <ol name='list'></ol>
             <fieldset>
