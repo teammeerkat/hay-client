@@ -5,14 +5,14 @@
   grid-gap: 1em;
 }
 
-li{
+.polls li{
   background-color: yellow;
   list-style: none;
   padding: 4%;
   text-align: center;
 }
 
-li:hover {
+.polls li:hover {
   font-size: 1.2em;
   background-color: white;
   border-bottom: 1px solid yellow;
