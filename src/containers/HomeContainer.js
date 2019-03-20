@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { getPolls } from '../actions/pollsAction';
+import { fetchAllPolls } from '../actions/pollsAction';
 import Polls from '../components/Polls/Polls';
-import getStatePolls from '../selectors/PollsSelector';
+import { getStatePolls } from '../selectors/PollsSelector';
 
 const mapStateToProps = state => ({
   polls: getStatePolls(state)
@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   fetch() {
-    dispatch(getPolls());
+    dispatch(fetchAllPolls());
   }
 });
 

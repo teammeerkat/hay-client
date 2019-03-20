@@ -11,7 +11,7 @@ import styles from './Polls.css';
 // ];
 
 export default class Polls extends PureComponent {
-  static PropTypes = {
+  static propTypes = {
     polls: PropTypes.array.isRequired,
     fetch: PropTypes.func.isRequired
   }
@@ -19,9 +19,9 @@ export default class Polls extends PureComponent {
   componentDidMount() {
     this.props.fetch();
   }
-  
+
   render() {
-    const pollList = polls.map((poll, i) => {
+    const pollList = this.props.polls.map((poll, i) => {
       return <li key={i}>{poll.question}</li>;
     });
     return (
