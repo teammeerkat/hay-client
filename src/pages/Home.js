@@ -1,10 +1,15 @@
 import React from 'react';
-import PollForm from '../components/pollform/PollForm';
+import Poll from '../components/poll/Poll';
+import HomeContainer from '../containers/HomeContainer';
+
 
 export default function Home() {
   return (
     <>
-      <PollForm/>
+
+      <h1>Home page!!</h1>
+      {/* //this will be the Polls page still need to link to its own page. */}
+      <HomeContainer />
     </>
   );
 }
