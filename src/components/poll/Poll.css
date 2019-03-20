@@ -1,0 +1,15 @@
+.poll{
+  display: inline-block;
+  background: red;
+  padding: 2%;
+}
+
+.poll li{
+  border-bottom: 1px solid white;
+  margin-bottom: 1em;
+
+}
+
+.poll li:hover{
+  background: maroon;
+}
