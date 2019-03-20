@@ -24,6 +24,8 @@ export default class PollForm extends PureComponent {
   };
   clearResponses = () => {
     this.setState({ responses: [] });
+    
+    // Remove all list items from the list
     const list = document.getElementsByName('list')[0];
     while(list.hasChildNodes()) {
       list.removeChild(list.childNodes[0]);
@@ -38,7 +40,7 @@ export default class PollForm extends PureComponent {
     return (
       <>
         <header>
-          <h2>Poll Form</h2>
+          <h2>Make a New Poll</h2>
         </header>
         <main>
           <form>
@@ -46,11 +48,11 @@ export default class PollForm extends PureComponent {
               <textarea onChange={this.handleChange} name='question'></textarea>
             </label>
             <ol name='list'></ol>
-            <button type='button' onClick={this.clearResponses}>Clear Responses</button>
             <fieldset>
               <legend>New Response</legend>
               <input type='text' name='newResponse'></input>
               <button type='button' onClick={this.handleAdd}>Add Response</button>
+              <button type='button' onClick={this.clearResponses}>Clear Responses</button>
             </fieldset>
             <button type='submit'>Create Poll</button>
           </form>
