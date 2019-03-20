@@ -15,11 +15,9 @@ export default class PollForm extends PureComponent {
     this.setState({ responses });
 
     // Add new response to list
-    // const list = document.getElementsByName('responses')[0];
-    // const newResponse = this.makeResponse(inputField.value);
-    console.log(this.makeResponse(inputField.value));
-
-
+    const li = this.makeResponse(inputField.value);
+    const list = document.getElementsByName('list')[0];
+    list.appendChild(li);
 
 
     // Reset the input field to empty
@@ -41,7 +39,7 @@ export default class PollForm extends PureComponent {
             <label>Poll Question:
               <textarea onChange={this.handleChange} name='question'></textarea>
             </label>
-            <ol>
+            <ol name='list'>
 
             </ol>
             <fieldset>
