@@ -1,7 +1,38 @@
+.addButton {
+  /* Size & Position */
+  width: 50%;
+  padding: 0.5em;
+
+  /* Color & Text */
+  background-color: rgb(107, 221, 124);
+  color: white;
+  font-size: 0.8em;
+}
+.all {
+  /* Color & Text */
+  background-color: aliceblue;
+}
+.buttonContainer {
+  /* Size & Position */
+  display: flex;
+  width: 100%;
+}
+.clearButton {
+  /* Size & Position */
+  width: 50%;
+
+  /* Color & Text */
+  background-color: rgb(231, 43, 43);
+  color: white;
+  font-size: 0.8em;
+}
+.fieldset {
+  /* Size & Position */
+  width: 50%;
+  margin: auto;
+}
 .h2 {
   /* Size & Position */
-  width: 60%;
-  margin: auto;
   padding: 1em;
   
   /* Color & Text */
@@ -9,11 +40,20 @@
   text-align: center;
   font-size: 2em;
 }
-.form {
+.legend {
   /* Size & Position */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  box-sizing: border-box;
+  width: 50%;
+  margin: auto;
+  padding: 0.3em;
+
+  /* Color & Text */
+  text-align: center;
+  background-color: rgba(206, 206, 206, 0.164);
+
+  /* Other */
+  border: 1px solid black;
+  border-radius: 0.5em;
 }
 .questionLabel {
   /* Size & Position */
@@ -33,4 +73,22 @@
 
   /* Color & Text */
   font-size: 0.9em;
+}
+.responseInput {
+  /* Size & Position */
+  box-sizing: border-box;
+  display: block;
+  width: 90%;
+  margin: 0.4em auto 0.4em auto;
+  padding: 0.4em;
+
+  /* Color & Text */
+  font-size: 1.1em;
+}
+.submitButton {
+  /* Size & Position */
+  display: block;
+  width: 30%;
+  margin: 0.4em auto 0.4em auto;
+  padding: 1em;
 }

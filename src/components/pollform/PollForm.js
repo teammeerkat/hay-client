@@ -39,26 +39,28 @@ export default class PollForm extends PureComponent {
   }
   render() {
     return (
-      <>
+      <div className={styles.all}>
         <header>
           <h2 className={styles.h2}>Make a New Poll</h2>
         </header>
         <main>
-          <form >
+          <form>
             <label className={styles.questionLabel}>Poll Question:
-              <input className={styles.questionInput} type='text' onChange={this.handleChange} name='question'  autoFocus></input>
+              <input className={styles.questionInput} type='text' onChange={this.handleChange} name='question' autoFocus required placeholder='What is your favorite JavaScript framework?'></input>
             </label>
             <ol name='list'></ol>
-            <fieldset>
-              <legend>New Response</legend>
-              <input type='text' name='newResponse'></input>
-              <button type='button' onClick={this.handleAdd}>Add Response</button>
-              <button type='button' onClick={this.clearResponses}>Clear Responses</button>
+            <fieldset className={styles.fieldset}>
+              <legend className={styles.legend}>New Response</legend>
+              <input className={styles.responseInput} type='text' name='newResponse' placeholder='Vue'></input>
+              <div className={styles.buttonContainer}>
+                <button className={styles.addButton} type='button' onClick={this.handleAdd}>Add Response</button>
+                <button className={styles.clearButton} type='button' onClick={this.clearResponses}>Clear Responses</button>
+              </div>
             </fieldset>
-            <button type='submit'>Create Poll</button>
+            <button className={styles.submitButton} type='submit'>Create Poll</button>
           </form>
         </main>
-      </>
+      </div>
     );
   }
 }
