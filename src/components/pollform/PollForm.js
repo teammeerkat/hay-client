@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 export default class PollForm extends PureComponent {
   state = {
-    responses: ['sample reaponse1', 'sample 2'],
+    responses: [],
     question: ''
   };
   handleChange = event => {
@@ -19,10 +19,16 @@ export default class PollForm extends PureComponent {
     const list = document.getElementsByName('list')[0];
     list.appendChild(li);
 
-
     // Reset the input field to empty
     inputField.value = '';
   };
+  clearResponses = () => {
+    this.setState({ responses: [] });
+    const list = document.getElementsByName('list')[0];
+    while(list.hasChildNodes()) {
+      list.removeChild(list.childNodes[0]);
+    }
+  }
   makeResponse = text => {
     const node = document.createElement('li');
     node.innerHTML = text;
@@ -39,9 +45,8 @@ export default class PollForm extends PureComponent {
             <label>Poll Question:
               <textarea onChange={this.handleChange} name='question'></textarea>
             </label>
-            <ol name='list'>
-
-            </ol>
+            <ol name='list'></ol>
+            <button type='button' onClick={this.clearResponses}>Clear Responses</button>
             <fieldset>
               <legend>New Response</legend>
               <input type='text' name='newResponse'></input>
