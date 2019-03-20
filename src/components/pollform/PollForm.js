@@ -8,10 +8,12 @@ export default class PollForm extends PureComponent {
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
-  handleAdd = event => {
-    const currentState = event.target.name;
-    const inputField = document.getElementsByName('response');
-    console.log(inputField[0].value);
+  handleAdd = () => {
+    const responses = this.state.responses;
+    let inputField = document.getElementsByName('response')[0];
+    responses.push(inputField.value);
+    this.setState({ responses });
+    inputField.value = '';
   };
   render() {
     return (
