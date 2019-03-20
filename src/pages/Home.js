@@ -1,5 +1,4 @@
 import React from 'react';
-import Poll from '../components/poll/Poll';
 import HomeContainer from '../containers/HomeContainer';
 
 
