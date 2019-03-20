@@ -17,6 +17,11 @@ class Callback extends React.PureComponent {
   }
 }
 
+// eslint-disable-next-line no-unused-vars
+const mapStateToProps = state => ({
+  
+});
+
 const mapDispatchToProps = (dispatch, props) => ({
   handleAuth() {
     const action = setSession();
@@ -28,5 +33,6 @@ const mapDispatchToProps = (dispatch, props) => ({
 });
 
 export default connect(
+  mapStateToProps,
   mapDispatchToProps
 )(Callback);

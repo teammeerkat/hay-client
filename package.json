@@ -32,10 +32,12 @@
   "license": "ISC",
   "dependencies": {
     "auth0-js": "^9.10.0",
+    "chart.js": "^1.1.1",
     "copy-webpack-plugin": "^5.0.1",
     "normalize.css": "^8.0.1",
     "promise-middleware-redux": "^1.0.5",
     "react": "^16.8.4",
+    "react-chartjs": "^1.2.0",
     "react-dom": "^16.8.2",
     "react-redux": "^6.0.1",
     "react-router-dom": "^4.3.1",
