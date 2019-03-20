@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
 import styles from './PollForm.css';
+
+// This component console logs a poll on submit
 export default class PollForm extends PureComponent {
   state = {
     responses: [],
@@ -37,6 +39,10 @@ export default class PollForm extends PureComponent {
     node.innerHTML = text;
     return node;
   }
+  handleSubmit = event => {
+    event.preventDefault();
+    console.log('submit', this.state);
+  }
   render() {
     return (
       <div className={styles.all}>
@@ -44,11 +50,10 @@ export default class PollForm extends PureComponent {
           <h2 className={styles.h2}>Make a New Poll</h2>
         </header>
         <main>
-          <form>
-            <label className={styles.questionLabel}>Poll Question:
+          <form onSubmit={this.handleSubmit}>
+            <label className={styles.questionLabel} onChange={this.handleChange} >Poll Question:
               <input className={styles.questionInput} type='text' onChange={this.handleChange} name='question' autoFocus required placeholder='What is your favorite JavaScript framework?'></input>
             </label>
-            <ol name='list'></ol>
             <fieldset className={styles.fieldset}>
               <legend className={styles.legend}>New Response</legend>
               <input className={styles.responseInput} type='text' name='newResponse' placeholder='Vue'></input>
@@ -57,6 +62,7 @@ export default class PollForm extends PureComponent {
                 <button className={styles.clearButton} type='button' onClick={this.clearResponses}>Clear Responses</button>
               </div>
             </fieldset>
+            <ol name='list'></ol>
             <button className={styles.submitButton} type='submit'>Create Poll</button>
           </form>
         </main>
