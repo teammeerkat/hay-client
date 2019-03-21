@@ -1,0 +1,20 @@
+.polls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  justify-content: center;
+  grid-gap: 1em;
+}
+
+.polls li{
+  background-color: yellow;
+  list-style: none;
+  padding: 4%;
+  text-align: center;
+}
+
+.polls li:hover {
+  font-size: 1.2em;
+  background-color: white;
+  border-bottom: 1px solid yellow;
+  transition: .7s;
+}
