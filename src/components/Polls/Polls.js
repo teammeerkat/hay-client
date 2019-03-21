@@ -2,13 +2,6 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Polls.css';
 
-// const polls = [
-//   { question:'Spiders or Snakes?', options:['spiders', 'snakes'] },
-//   { question:'Spiders or Snakes?', options:['spiders', 'snakes'] },
-//   { question:'Spiders or Snakes?', options:['spiders', 'snakes'] },
-//   { question:'Spiders or Snakes?', options:['spiders', 'snakes'] },
-//   { question:'Spiders or Snakes?', options:['spiders', 'snakes'] }
-// ];
 
 export default class Polls extends PureComponent {
   static propTypes = {

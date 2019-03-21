@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Poll.css';
 
-export default function Poll({ question, options }) {
+export default function Poll({ question, options, onClick }) {
   const optionsList = options.map((option, i) => {
-    return <li key={i}>{option}</li>;
+    return <li key={i} onClick={onClick}>{option.option}</li>;
   });
   return (
     <section className={styles.poll}>
@@ -16,6 +16,7 @@ export default function Poll({ question, options }) {
 }
 
 Poll.propTypes = {
-  question: PropTypes.string.isRequired,
-  options: PropTypes.array.isRequired
+  question: PropTypes.string,
+  options: PropTypes.array,
+  onClick: PropTypes.func
 };
